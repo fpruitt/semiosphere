@@ -1,6 +1,8 @@
 # Semiosphere
 A Strategy Game created by Zach Dugger and programmed by Forrest Pruitt.
 
+![image](https://cloud.githubusercontent.com/assets/2659644/12437082/b8b597b6-bee8-11e5-89aa-71eaa755eaa7.png)
+
 ## Running Semiosphere
 
 * install python3
