@@ -1,11 +1,30 @@
-# semiosphere
-A WIP Strategy Game created by Zach Dugger and programmed by Forrest Pruitt.
+# Semiosphere
+A Strategy Game created by Zach Dugger and programmed by Forrest Pruitt.
 
 ## Running Semiosphere
 
 * install python3
 * clone repo or download zip (https://github.com/fpruitt/semiosphere/archive/master.zip)
-* 
+* run `python3 game.py` to start the game, in the unzipped file above.
+
+## Quick install + run script for OSX
+I know not everyone is a terminal/git/build-from-source wizard, so here's a simple script for OSX to get the prerequisites installed, along with the game. Simply copy and paste the lines below into your terminal (you'll have to give your password after the second line to install python3) and you should have the game running in no time! (Note: to open the terminal, type command-space to open spotlight, then type 'terminal' and hit enter)
+```
+curl https://www.python.org/ftp/python/3.4.4/python-3.4.4-macosx10.6.pkg >> ~/Downloads/python3.pkg
+sudo installer -pkg ~/Downloads/python3.pkg -target /
+curl -Lk https://github.com/fpruitt/semiosphere/archive/master.zip >> ~/Downloads/semiosphere.zip
+unzip ~/Downloads/semiosphere
+cd ~/Downloads/semiosphere-master
+python3 game.py
+```
+
+### Running the game after the above script installs
+To play Semiosphere after the first install, copy the below into a terminal:
+```
+cd ~/Downloads/semiosphere-master
+python3 game.py
+```
+
 
 ## Info and Rules
 Note: This game is a work in progress. These rules are subject to, and probably will, change.
@@ -53,7 +72,8 @@ stopping the other players from reaching their goal!
 ### Leaving the Semiosphere
 You can leave the Semiosphere, so long as The Void hasn't taken the final row.
 You will pay the same cost (5 action points) to re-enter it later.
+When you exit, you are placed onto the row closest to the semiosphere. 
+You choose the column you wish to exit onto.
 
-### Tie
-If multiple players reach the Semiosphere and none of them have their planets by the time the Void takes all of the rows, 
-the game ends in a tie between those players.
+### Tieing
+If multiple players reach the Semiosphere and none of them have their planets by the time the Void takes all of the rows or their planets, the game ends in a tie between those players.
