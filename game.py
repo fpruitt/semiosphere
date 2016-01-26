@@ -72,14 +72,14 @@ def prompt_player_for_initial_placement(player, game, row=0):
         try:
             starting_column = int(column_start_str)
 
-            if not 0 <= starting_column < game.num_of_rows():
+            if not 0 <= starting_column < game.num_of_columns():
                 raise ValueError
             try:
                 game.move_player_to_cell(player=player, row_id=row, column_id=starting_column)
             except BadMoveError:
                 raise ValueError
         except ValueError:
-            print("Invalid entry, please enter a number between 0 and {} that is not already occupied.".format(game.num_of_rows()))
+            print("Invalid entry, please enter a number between 0 and {} that is not already occupied.".format(game.num_of_columns() - 1))
         else:
             valid_entry = True
 
