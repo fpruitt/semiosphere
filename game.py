@@ -58,7 +58,7 @@ def create_players_from_interactive_input():
     players = []
     num_of_players = _get_player_count()
     for i in range(0, num_of_players):
-        name = input("Enter player {player_number}'s name--> ".format(player_number=i))
+        name = input("Enter player {player_number}'s name--> ".format(player_number=i + 1))
         players.append(Player(name))
     return players
 
