@@ -291,21 +291,21 @@ def _get_row_column_nums_from_player(game, action):
     while not valid_row_str:
         try:
             row_num = int(input("In what row would you like to {action}? --> ".format(action=action)))
-            if 0 >= row_num >= game.num_of_rows():
+            if 0 >= row_num > game.num_of_rows():
                 raise ValueError
         except ValueError:
-            print("Invalid row number, please enter a value between 0 and {rows}".format(rows=game.num_of_rows()))
+            print("Invalid row number, please enter a value between 0 and {rows}".format(rows=game.num_of_rows() - 1))
         else:
             valid_row_str = True
     while not valid_column_str:
         try:
             column_num = int(input("In what column would you like to {action}? --> ".format(action=action)))
-            if 0 >= column_num >= game.num_of_columns():
+            if 0 >= column_num > game.num_of_columns():
                 raise ValueError
         except ValueError:
             print(
                     "Invalid column number, please enter a value between 0 and {columns}".format(
-                        columns=game.num_of_columns()
+                        columns=game.num_of_columns() - 1
                     )
             )
         else:

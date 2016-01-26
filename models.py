@@ -231,12 +231,16 @@ class Grid:
         return len(self.cells[0])
 
     def get_cell(self, row, column):
-        return self.cells[row][column]
+        try:
+            cell = self.cells[row][column]
+        except KeyError:
+            return None
+        return cell
 
     def check_for_semiosphere_exit(self, player):
         """
         Check to see if there is a valid exit from the semiosphere available.
-        :return: True if there is a cell that the player can move to from the semiosphere, false if there is not.
+        :return: True if there is a cell that the player can move to from the semiosphere, False if there is not.
         """
         for cell in self.cells[self.get_number_of_rows() - 1]:
             if cell.valid_for_player_to_enter(player=player):
